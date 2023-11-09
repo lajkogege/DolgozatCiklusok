@@ -63,15 +63,30 @@ def otodik_feldat():
     print("5.feldat:")
     beker: str = str(input("Kő-papír-olló játék. Add meg a tippedett: "))
     felhasznalo_tippje: str = beker.casefold()
+    gep_tippje:str=""
     while not(beker=="kő" or beker=="papír" or beker=="olló"):
         beker: str = str(input("Kő-papír-olló játék. Add meg a tippedett: "))
         felhasznalo_tippje: str = beker.casefold()
-    gep_tippje:int=random.random()*(1-3)+3
-    if gep_tippje == 1:
-        gep_tippje== "kő"
-    elif gep_tippje==2:
-        gep_tippje=="papír"
-    elif gep_tippje==3:
-        gep_tippje=="olló"
+    random_tipp:int=math.floor(random.random()*(1-3)+3)
+    print(random_tipp)
+    if random_tipp == 1:
+        gep_tippje= "kő"
+    elif random_tipp==2:
+        gep_tippje="papír"
+    elif random_tipp==3:
+        gep_tippje="olló"
     if gep_tippje == felhasznalo_tippje:
         print("Döntetlen")
+
+    elif gep_tippje == "kő" and felhasznalo_tippje=="papír":
+        print("A felhasználó gyözött")
+    elif gep_tippje == "kő" and felhasznalo_tippje == "olló":
+        print("A gép gyözött")
+    elif gep_tippje == "papír" and felhasznalo_tippje == "kő":
+        print("A felhasználó gyözött")
+    elif gep_tippje == "papír" and felhasznalo_tippje == "olló":
+        print("A felhasználó gyözött")
+    elif gep_tippje == "olló" and felhasznalo_tippje == "kő":
+        print("A gép gyözött")
+    elif gep_tippje == "olló" and felhasznalo_tippje == "papír":
+        print("A gép gyözött")
