@@ -3,7 +3,6 @@ import math
 '''Kérj be 1 páros számot a felhasználótól. (1 pont)
 Amennyiben nem páros számot ad meg a felhasználó, akkor kérd be újra a számot, addig, amíg páros számot nem ad meg!  (1 pont)'''
 def elso_feladat():
-    print("1.feldat:")
     paros_szam:int=int(input("Kérek egy páros számot! "))
     while not (paros_szam %2 ==0 ):
         paros_szam:int=int(input("Ez nem páros! Páros számot kérek!"))
@@ -12,7 +11,6 @@ def elso_feladat():
 
 '''Írass ki a konzolra 13 db  [10, 150] zárt intervallumba eső véletlen számot. Hány 3-mal osztható van közöttük? A kiírás formátuma: „A számok között X db 3-mal osztható van!'''
 def masodik_feldat():
-    print("2.feldat:")
     i:int=0
     harommal_oszthato:int=0
     while i<13:
@@ -26,7 +24,6 @@ def masodik_feldat():
     print("")
 
 def harmadik_feladat(txt, n):
-    print("3.feladat:")
     txt:str=""
     n:int=0
     szoveg_hossz:int=len(txt)
@@ -42,13 +39,13 @@ Hány nevet adott meg a felhasználó?
 A kiírás formája: „A felhasználó 12 nevet adott meg.'''
 
 def negyedik_feldat():
-    print("4.feldat:")
     nevek:str=str(input("Kérek egy nevet, vagy állistd meg @ jelel: "))
     szamlalo:int=0
     while not (nevek == "@"):
         nevek: str = str(input("Kérek egy nevet, vagy állistd meg @ jelel: "))
         szamlalo +=1
     print(f"A felhasználó {szamlalo} nevet adott meg.")
+    print("")
 
 '''Szimuláljuk a kő-papír-olló játékot. 
 Írj eljárást, amiben: 
@@ -60,7 +57,6 @@ Ezután írd ki, hogy ki nyert!
 ++ Ha valami más szót ad meg a felhasznló  a kő, papír, ollón kívül, akkor kérje be újra!
 '''
 def otodik_feldat():
-    print("5.feldat:")
     beker: str = str(input("Kő-papír-olló játék. Add meg a tippedett: "))
     felhasznalo_tippje: str = beker.casefold()
     gep_tippje:str=""
